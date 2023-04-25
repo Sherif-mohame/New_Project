@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #191919;
+  color: #404040;
+  font: 12px/1.4 Arial;
+  position: relative;
+  background-image: url("../images/background.jpg");
+  background-size: contain;
+}
+
+a {
+  color: #bebebe;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+/* nav */
+.navbar {
+  background-color: #fcfcfc;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Raleway", Arial, sans-serif;
+  text-align: center;
+
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.logo img {
+  width: 60px;
+  margin-left: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li a {
+  padding: 0.3em 0;
+  color: rgb(85, 53, 53);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.nav-links li a:hover {
+  color: #db3839;
+}
+.nav-links li {
+  border-left: 3px solid #ba3032;
+}
+.nav-links li:first-child {
+  border-left: none;
+}
+
+@media (max-width: 768px) {
+  /* Change the font size of the body */
+  body {
+    font-size: 10px;
+  }
+  .logo img {
+    width: 40px;
+  }
+  .navbar {
+    padding: 5px;
+  }
+
+  .nav-links li a {
+    font-size: 10px;
+    padding: 0.3em 5px;
+  }
+
+  .nav-links li:last-child {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .logo img {
+    display: none;
+  }
+}
+/* End nav */
+
+/******************************
+	  Navigation Menu
+******************************/
+
+.horizontal-menu {
+  background-color: #503132;
+  color: #bebebe;
+  display: block;
+  height: 50px;
+  margin: 20px auto;
+  max-width: 1100px;
+}
+* a {
+  color: white;
+  font-weight: bold;
+}
+/******************************
+					Globals
+******************************/
+
+.horizontal-menu.plain,
+.horizontal-menu.dropdown {
+  display: block;
+}
+
+.horizontal-menu.plain li,
+.horizontal-menu.dropdown li {
+  float: left;
+  height: 100%;
+  width: 16.6666%;
+}
+
+.horizontal-menu.plain li a,
+.horizontal-menu.dropdown li > a {
+  display: block;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  transition: background-position 0.2s ease 0s;
+}
+
+.horizontal-menu.plain li a,
+.horizontal-menu.dropdown li > div > a {
+  transition: background-position 0.1s ease 0s;
+}
+
+.horizontal-menu.plain li:not(.active):hover a,
+.horizontal-menu.dropdown li > div > a:hover {
+  color: #fff;
+  background-position: 100% 0;
+}
+
+.horizontal-menu.plain li.active a:active,
+.horizontal-menu.dropdown > div:not(.active):hover > a:active {
+  background: #ba3032;
+  color: #fff;
+}
+
+.horizontal-menu.plain li a {
+  background: #2c2d2f linear-gradient(to left, #3b3d3f 50%, #2c2d2f 50%) repeat
+    scroll 0 0 / 200% 100%;
+}
+
+.horizontal-menu.plain li.active a {
+  background: #db3839;
+  color: #fff;
+}
+
+.horizontal-menu.dropdown li,
+.horizontal-menu.dropdown li > a {
+  transition: background-color 0.2s ease;
+}
+
+.horizontal-menu.dropdown li {
+  position: relative;
+}
+
+.horizontal-menu.dropdown li > a {
+  text-transform: uppercase;
+}
+
+.horizontal-menu.dropdown li > div {
+  background: #2c2d2f;
+  display: none;
+  min-width: 200%;
+  overflow: hidden;
+  position: absolute;
+  padding: 10px;
+  z-index: 999;
+}
+
+.horizontal-menu.dropdown li:not(:first-of-type):not(:last-of-type) > div {
+  left: -50%;
+  border-radius: 0 0 3px 3px;
+}
+
+.horizontal-menu.dropdown li:first-of-type > div {
+  left: 0;
+  border-radius: 0 0 3px 0;
+}
+
+.horizontal-menu.dropdown li:last-of-type > div {
+  right: 0;
+  border-radius: 0 0 0 3px;
+}
+
+.horizontal-menu.dropdown li:hover > div {
+  display: block;
+}
+
+.horizontal-menu.dropdown li:hover,
+.horizontal-menu.dropdown li:hover > div {
+  background: #3b3d3f;
+}
+
+.horizontal-menu.dropdown li > div > a {
+  background: #2c2d2f linear-gradient(to left, #db3839 50%, #2c2d2f 50%) repeat
+    scroll 0 0 / 200% 100%;
+  border-radius: 2px;
+  display: block;
+  float: left;
+  margin: 2%;
+  padding: 8px 10px;
+  text-align: center;
+  transition: background-position 0.2s ease;
+  width: 46%;
+}
+
+.horizontal-menu.dropdown li > div > a:hover {
+  background-position: 100% 0;
+  cursor: pointer;
+}
+/*  */
+.image-qr {
+  text-align: center;
+}
+.image-qr img {
+  width: 300px;
+  margin-top: 20px;
+}
