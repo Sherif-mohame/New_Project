@@ -27,7 +27,7 @@ ul {
 }
 /* nav */
 .navbar {
-  background-color: #fcfcfc;
+  background-color: #503132;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -43,7 +43,9 @@ ul {
   width: 60px;
   margin-left: 20px;
 }
-
+.logo-2030 {
+  background-color: white;
+}
 .nav-links {
   display: flex;
   justify-content: space-between;
@@ -61,7 +63,7 @@ ul {
 
 .nav-links li a {
   padding: 0.3em 0;
-  color: rgb(85, 53, 53);
+  color: rgb(243, 243, 243);
   position: relative;
   display: inline-block;
   letter-spacing: 1px;
